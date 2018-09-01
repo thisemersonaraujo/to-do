@@ -33,7 +33,6 @@
               "src/assets/js/plugins/moment.min.js",
               "src/assets/js/plugins/bootstrap-datetimepicker.js",
               "src/assets/js/plugins/nouislider.min.js",
-              "https://buttons.github.io/buttons.js",
               "src/assets/js/material-kit.js?v=2.0.4"
             ]
           },
