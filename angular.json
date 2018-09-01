@@ -24,7 +24,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/css/material-kit.css?v=2.0.4"
+              "src/assets/css/material-kit.css"
             ],
             "scripts": [
               "src/assets/js/core/jquery.min.js",
@@ -33,7 +33,7 @@
               "src/assets/js/plugins/moment.min.js",
               "src/assets/js/plugins/bootstrap-datetimepicker.js",
               "src/assets/js/plugins/nouislider.min.js",
-              "src/assets/js/material-kit.js?v=2.0.4"
+              "src/assets/js/material-kit.js"
             ]
           },
           "configurations": {
