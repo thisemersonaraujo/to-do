@@ -1,0 +1,35 @@
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">
+      <div class="icon icon-primary">
+        <i class="material-icons">chat</i>
+      </div>
+    </span>
+  </div>
+  <input type="text" class="form-control" placeholder="Your new task here" (keyup.enter)="addNewTask(newTask.value)" #newTask>
+  <div class="input-group-prepend">
+    <button class="btn btn-primary btn-md btn-fab btn-fab-mini btn-round" (click)="addNewTask(newTask.value)">
+      <i class="material-icons">send</i>
+    </button>
+  </div>
+</div>
+<br>
+<div class="card card-nav-tabs text-center">
+  <div class="card-header card-header-primary">
+    Tasks
+  </div>
+  <div class="card-body">
+    <table class="table table table-hover">
+      <tbody>
+        <tr *ngFor="let task of tasks">
+          <td class="text-left">{{ task }}</td>
+          <!-- <td class="text-right">v</td> Need to insert a button to complete tasks -->
+          <!-- <td class="text-right">x</td> Need to insert a button to delete tasks -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- <div class="card-footer text-muted">
+    2 days left // In the future, this div will show how many days left to complete tasks
+  </div> -->
+</div>
