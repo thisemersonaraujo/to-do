@@ -6,9 +6,9 @@
       </div>
     </span>
   </div>
-  <input type="text" class="form-control" placeholder="Your new task here" (keyup.enter)="addNewTask(newTask.value)" #newTask>
+  <input type="text" class="form-control" placeholder="Your new task here" (keyup.enter)="addNewTask()" [(ngModel)]="newTask">
   <div class="input-group-prepend">
-    <button class="btn btn-primary btn-md btn-fab btn-fab-mini btn-round" (click)="addNewTask(newTask.value)">
+    <button class="btn btn-primary btn-md btn-fab btn-fab-mini btn-round" (click)="addNewTask()">
       <i class="material-icons">send</i>
     </button>
   </div>
@@ -22,9 +22,16 @@
     <table class="table table table-hover">
       <tbody>
         <tr *ngFor="let task of tasks">
-          <td class="text-left">{{ task }}</td>
-          <!-- <td class="text-right">v</td> Need to insert a button to complete tasks -->
-          <!-- <td class="text-right">x</td> Need to insert a button to delete tasks -->
+          <td class="text-left">{{ task.title }}</td>
+          <td class="text-right">
+            <button (click)="changeTaskStatus(task.id)" class="btn btn-primary btn-md btn-fab btn-fab-mini btn-round">
+              <i class="material-icons" *ngIf="task.done">done</i>
+              <i class="material-icons" *ngIf="!task.done">remove</i>
+            </button>
+            <button (click)="deleteTask(task.id)" class="btn btn-primary btn-md btn-fab btn-fab-mini btn-round">
+              <i class="material-icons">clear</i>
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>
