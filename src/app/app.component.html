@@ -25,8 +25,8 @@
           <td class="text-left">{{ task.title }}</td>
           <td class="text-right">
             <button (click)="changeTaskStatus(task.id)" class="btn btn-primary btn-md btn-fab btn-fab-mini btn-round">
-              <i class="material-icons" *ngIf="task.done">check_box</i>
-              <i class="material-icons" *ngIf="!task.done">check_box_outline_blank</i>
+              <i class="material-icons" *ngIf="task.done">done</i>
+              <i class="material-icons" *ngIf="!task.done">remove</i>
             </button>
             <button (click)="deleteTask(task.id)" class="btn btn-primary btn-md btn-fab btn-fab-mini btn-round">
               <i class="material-icons">clear</i>
